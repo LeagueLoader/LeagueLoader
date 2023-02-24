@@ -1,5 +1,6 @@
 #include "../internal.h"
 
+HWND rclient_window_ = nullptr;
 extern cef_browser_t *browser_;
 void OpenDevTools_Internal(bool remote);
 
@@ -83,4 +84,5 @@ void SetUpBrowserWindow(cef_browser_t *browser, cef_frame_t *frame)
 
     // Set hotkeys.
     SetUptHotkeys(rclient);
+    rclient_window_ = rclient;
 }
